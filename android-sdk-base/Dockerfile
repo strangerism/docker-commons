@@ -15,7 +15,8 @@ RUN apt-get update && apt-get install -y \
  curl \
  unzip \
  libqt5widgets5 \
- aptitude
+ aptitude \
+ && apt-get clean
 
 RUN dpkg --add-architecture i386
 
@@ -24,6 +25,4 @@ RUN aptitude update && aptitude install -y \
  libgcc1:i386 \
  zlib1g:i386 \
  libncurses5:i386
-
- RUN apt-get clean
 
