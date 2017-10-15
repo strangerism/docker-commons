@@ -25,3 +25,5 @@ RUN aptitude update && aptitude install -y \
  zlib1g:i386 \
  libncurses5:i386
 
+ RUN apt-get clean
+
