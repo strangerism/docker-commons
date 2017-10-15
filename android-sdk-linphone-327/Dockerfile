@@ -51,7 +51,7 @@ ENV PATH $PATH:$HOME/bin
 RUN curl https://dl.google.com/android/repository/android-ndk-r12b-linux-x86_64.zip > android-ndk-r12b.zip \
  && unzip android-ndk-r12b.zip \
  && rm android-ndk-r12b.zip \
- && chgrp -R android $ANDROID_NDK_HOME && chmod -R 775 $ANDROID_NDK_HOME
+ && chgrp -R android $HOME/android-ndk-r12b && chmod -R 775 $HOME/android-ndk-r12b
 ENV ANDROID_NDK_HOME $HOME/android-ndk-r12b
 ENV PATH $PATH:$ANDROID_NDK_HOME
 
