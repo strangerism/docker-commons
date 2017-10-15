@@ -30,7 +30,7 @@ RUN curl https://dl.google.com/android/android-sdk_r${ANDROID_SDK_TOOLS}-linux.t
  && echo y  | $ANDROID_HOME/tools/android update sdk --no-ui --all --filter extra-google-m2repository \
  && echo y  | $ANDROID_HOME/tools/android update sdk --no-ui --all --filter sys-img-x86-google_apis-${ANDROID_COMPILE_SDK} \
  && echo no | $ANDROID_HOME/tools/android create avd -n test -t android-${ANDROID_COMPILE_SDK} --abi google_apis/x86 \
- && echo y  | $ANDROID_HOME/tools/android update sdk -u -a -t build-tools-25.0.2 && \
+ && echo y  | $ANDROID_HOME/tools/android update sdk -u -a -t build-tools-25.0.2 \
  && echo y  | $ANDROID_HOME/tools/android update sdk -u -a -t android-23 \
  && chgrp -R android $ANDROID_HOME && chmod -R 775 $ANDROID_HOME
 ENV PATH $PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
